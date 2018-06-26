@@ -1,0 +1,172 @@
+@mixin slideToLeft-mixin($name,$initial,$final) {
+
+  @keyframes #{$name}{
+    from {
+      transform: translate($initial * 1%, 0);
+
+    }
+    to {
+      transform: translate($final* 1%, 0);
+
+    }
+  }
+}
+
+@include slideToLeft-mixin("centerToLeft", 0, -100)
+@include slideToLeft-mixin("rightToCenter", 0,-100)
+
+.centerToLeft {
+  animation-duration: 0.4s;
+  animation-name: centerToLeft;
+  animation-timing-function: ease-in-out;
+
+}
+
+.rightToCenter {
+  animation-duration: 0.4s;
+  animation-name: rightToCenter;
+  animation-timing-function: ease-in-out;
+}
+
+@mixin slideToRight-mixin($name,$initial,$final) {
+
+  @keyframes #{$name}{
+    from {
+      transform: translate($initial * 1%, 0);
+      width: 100%;
+    }
+    to {
+      transform: translate($final* 1%, 0);
+      width: 100%;
+    }
+  }
+}
+
+@include slideToRight-mixin("leftToCenter", -100, 0)
+@include slideToRight-mixin("centerToRight", -100, 0)
+
+.leftToCenter {
+  animation-duration: 0.4s;
+  animation-name: leftToCenter;
+  animation-timing-function: ease-in;
+}
+
+.centerToRight {
+  animation-duration: 0.4s;
+  animation-name: centerToRight;
+  animation-timing-function: ease-in;
+}
+
+@keyframes animationAriane {
+  from {
+    transform: translate(100%, 0);
+  }
+  to {
+    transform: translate(0%, 0);
+  }
+}
+
+.animationAriane {
+ animation-name: animationAriane;
+  animation-duration: 0.5s;
+}
+
+@mixin chargementPageSuivante-mixin($taille) {
+  .chargementPageSuivante {
+    @media screen and (max-width: $taille) {
+      box-shadow: inset $taille*0.8 0 0 0.01px $violet;
+      transition: all ease 0.4s;
+    }
+  }
+}
+
+@include chargementPageSuivante-mixin($b-small);
+@include chargementPageSuivante-mixin($b-medium);
+@include chargementPageSuivante-mixin($b-large);
+@include chargementPageSuivante-mixin($b-Xlarge);
+
+
+@mixin commingFormular-mixin($name,$initial,$final) {
+
+  @keyframes #{$name}{
+    from {
+      transform: translate($initial , 0);
+
+    }
+    to {
+      transform: translate($final,0);
+
+    }
+  }
+}
+
+@include commingFormular-mixin("formMailRightToScreen", 0, -300px)
+@include commingFormular-mixin("formMailScreenToRight",-300px, 0)
+
+
+.formMailRightToScreen {
+  animation-duration: 0.5s;
+  animation-name: formMailRightToScreen;
+  animation-timing-function: ease-in;
+}
+.posFinal {
+  transform: translate(-300px, 0);
+}
+.formMailScreenToRight {
+  animation-duration: 0.5s;
+  animation-name: formMailScreenToRight ;
+  animation-timing-function: ease-in;
+}
+
+@keyframes moveCroix{
+  from {
+    transform: translate(75px, 0);
+    margin-left: 0px;
+  }
+  to {
+    transform: translate(80px  ,0);
+    margin-left: 0px;
+  }
+}
+
+
+.moveCroix{
+  animation-duration: 0.6s;
+  animation-name: moveCroix;
+  animation-timing-function: ease-in;
+}
+
+@mixin decalageZoneViolet-mixin($name,$initial,$final) {
+
+@keyframes #{$name}{
+  from {
+    width: $initial;
+  }
+  to {
+    width: $final;
+
+  }
+}
+}
+
+@include decalageZoneViolet-mixin("zoneInterogarionRightToLeft",210px, 300px)
+@include decalageZoneViolet-mixin("zoneInterogarionLeftToRight",300px, 210px)
+
+
+.zoneInterogarionRightToLeft {
+  animation-duration: 0.5s;
+  animation-name: zoneInterogarionRightToLeft;
+  animation-timing-function: ease-in;
+}
+.tailleFinal{
+  width: 300px!important;
+}
+.zoneInterogarionLeftToRight {
+  animation-duration: 0.5s;
+  animation-name: zoneInterogarionLeftToRight;
+  animation-timing-function: ease-in;
+}
+
+
+
+

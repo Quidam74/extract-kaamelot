@@ -1,0 +1,64 @@
+
+
+//  Start environment (variables utiles)
+/////////////////////////////
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500,700');
+
+//COLORS`
+$grey-bg : #F5F7FA;
+$rouge: #FF0000;
+$orange : #EF6446;
+$black : #2E2E2E;
+$white : #FFFFFF;
+$orange-bg-header : #D7420F;
+
+$grey-text : #C4C4C4;
+$grey : #96959a;
+$grey-dark : #46535E;
+$grey-blue: #dae1ea;
+
+
+$violet : #7B47C2;
+$bleu: 	#00a9ff;
+$jaune: #ffd600 ;
+
+
+$color-main : $black;
+$color-second: $orange;
+$color-bg: $white;
+$color-text : $black;
+
+
+//LAYOUT
+$goutiere: 120px;
+$goutiere-m: 80px;
+$goutiere-s: 30px;
+
+
+$wrapper-small : 585px;
+$wrapper-normal : 1170px;
+$wrapper-large : 1600px;
+
+
+//FONTS
+
+
+
+
+$font-size: 19px;
+$font-main: 'Roboto', sans-serif;
+
+
+
+
+//OTHER
+$bezier : cubic-bezier(1,.17,1,-0.62);
+
+
+//break
+
+$b-small: 320px;
+$b-medium: 750px;
+$b-large: 1350px;
+$b-Xlarge: 1920px;
+
